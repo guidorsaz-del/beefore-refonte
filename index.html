@@ -183,9 +183,8 @@ footer .soc svg{width:18px;height:18px}
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
-  .stack:hover .layer,.stack.open .layer{transform:none!important}
-  .stack .layer .tag{opacity:1}
-  .stack{height:auto;gap:8px}
+  /* on garde la déconstruction du burger interactive, mais instantanée */
+  .layer{transition-duration:.01ms}
 }
 </style>
 </head>

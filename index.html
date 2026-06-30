@@ -3,145 +3,370 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beefore — Bar Restaurant à Martigny</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<title>BEEFORE — Artisan du hamburger depuis 2016 · Martigny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#060504;--bg2:#0d0b09;--amber:#c9820a;--gold:#e8a820;--cream:#f5eddc;--muted:#8a7a5a;--bdr:rgba(201,130,10,0.22)}
+:root{
+  --cream:#F4EEE1;
+  --cream2:#E9DFC9;
+  --ink:#211A13;
+  --ink2:#2E251B;
+  --flame:#C8531F;
+  --flame-d:#A83F12;
+  --mustard:#D6A12E;
+  --char:#1A140E;
+  --muted:#8A7C68;
+  --line:rgba(33,26,19,.14);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Lato',sans-serif;background:var(--bg);color:var(--cream);line-height:1.75}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,5,4,0);transition:all 0.4s}
-nav.scrolled{background:rgba(6,5,4,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:0.22em;color:var(--cream);text-decoration:none}
-.nav-logo span{color:var(--amber)}
-nav ul{list-style:none;display:flex;gap:28px;align-items:center}
-nav a{text-decoration:none;color:var(--muted);font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;transition:color 0.2s}
-nav a:hover{color:var(--cream)}
-.nav-cta{padding:7px 20px;border:1px solid var(--amber);color:var(--amber)!important}
-.nav-cta:hover{background:var(--amber);color:var(--bg)!important}
-.hero{height:100vh;min-height:600px;background:linear-gradient(rgba(6,5,4,0.2) 0%,rgba(6,5,4,0.1) 30%,rgba(6,5,4,0.96) 100%),url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600&auto=format&fit=crop&q=85') center/cover no-repeat;display:flex;align-items:flex-end;padding:0 8vw 90px}
-.hi{max-width:640px}
-.hi .tag{font-size:0.63rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:14px}
-.hi h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,9rem);line-height:0.85;margin-bottom:16px;color:var(--cream)}
-.hi h1 span{color:var(--gold)}
-.hi p{font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(245,237,220,0.45);margin-bottom:30px}
-.btn{display:inline-block;padding:12px 32px;text-decoration:none;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;transition:all 0.22s;margin:0 8px 0 0}
-.btn-amber{background:var(--amber);color:var(--bg)}.btn-amber:hover{background:#b07208}
-.btn-ol{border:1px solid rgba(245,237,220,0.3);color:var(--cream)}.btn-ol:hover{border-color:var(--cream)}
-.concept{padding:90px 24px;background:var(--bg)}
-.cw{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.ci{height:460px;background:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=900&auto=format&fit=crop&q=80') center/cover no-repeat}
-.ct .tag2{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:14px}
-.ct h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--cream);margin-bottom:18px;line-height:1.15}
-.ct p{color:var(--muted);font-size:0.9rem;margin-bottom:14px}
-.menu{padding:80px 24px;background:var(--bg2)}
-.sec-hd{text-align:center;max-width:560px;margin:0 auto 52px}
-.sec-hd .tag2{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px}
-.sec-hd h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:300;font-style:italic;color:var(--cream)}
-.sec-hd .ln{width:40px;height:1px;background:var(--amber);margin:14px auto 0}
-.menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:1000px;margin:0 auto}
-.mside{background:var(--bg);padding:36px 32px;border-top:2px solid var(--amber)}
-.mside h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);margin-bottom:20px}
-.mrow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(201,130,10,0.12);font-size:0.83rem}
-.mrow:last-child{border-bottom:none}
-.ml{color:var(--cream)}.mp{color:var(--amber);font-weight:700;white-space:nowrap;margin-left:10px}
-.food{padding:80px 24px;background:var(--bg)}
-.fw{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.fi{height:440px;background:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&auto=format&fit=crop&q=80') center/cover no-repeat}
-.ft .tag2{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:14px}
-.ft h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;font-style:italic;color:var(--cream);margin-bottom:18px;line-height:1.15}
-.ft p{color:var(--muted);font-size:0.9rem;margin-bottom:14px}
-.contact{padding:80px 24px;background:var(--bg2)}
-.c-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.cc .tag2{font-size:0.65rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px}
-.cc h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--cream);margin-bottom:12px}
-.cc p,.cc a{color:var(--muted);font-size:0.86rem;text-decoration:none;display:block;line-height:1.9}
-.cc a:hover{color:var(--cream)}
-footer{background:#030201;padding:22px 24px;text-align:center;border-top:1px solid var(--bdr)}
-footer p{font-size:0.73rem;color:rgba(138,122,90,0.3)}
-.fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.65s,transform 0.65s}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){nav{padding:14px 18px}nav ul{display:none}.hero{padding:0 24px 60px;align-items:flex-end}.cw,.fw{grid-template-columns:1fr;gap:32px}.ci,.fi{height:260px}.menu-wrap{grid-template-columns:1fr}.c-inner{grid-template-columns:1fr;gap:24px}}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.32em;font-size:.74rem;color:var(--flame);font-weight:500}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 34px;transition:.4s;color:var(--cream)}
+nav.scrolled{background:var(--char);padding:12px 34px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:9px}
+.brand .b-dot{width:9px;height:9px;border-radius:50%;background:var(--flame)}
+.navlinks{display:flex;align-items:center;gap:30px}
+.navlinks a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:.84rem;font-weight:500;position:relative}
+.navlinks a:not(.btn)::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--flame);transition:width .35s}
+.navlinks a:not(.btn):hover::after{width:100%}
+.btn{display:inline-block;padding:11px 24px;background:var(--flame);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;font-weight:500;border:2px solid var(--flame);transition:.3s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--flame)}
+nav:not(.scrolled) .btn:hover{color:#fff;background:var(--flame-d);border-color:var(--flame-d)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:26px;height:2px;background:currentColor;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--char)}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=1700&auto=format&fit=crop&q=85') center/cover no-repeat;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.16)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(95deg,rgba(20,14,9,.92) 0%,rgba(20,14,9,.6) 48%,rgba(20,14,9,.25) 100%)}
+.hero-inner{position:relative;z-index:3;color:var(--cream);width:100%;max-width:1200px;margin:0 auto;padding:0 32px}
+.hero h1{font-size:clamp(3rem,9vw,8rem);font-weight:700;margin:16px 0 10px;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--flame)}
+.hero p{font-family:'Instrument Sans',sans-serif;font-size:1.16rem;max-width:42ch;margin:18px 0 32px;color:rgba(244,238,225,.88)}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.ghost{display:inline-block;padding:11px 24px;border:2px solid rgba(244,238,225,.5);color:var(--cream);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;font-weight:500;transition:.3s}
+.ghost:hover{background:var(--cream);color:var(--ink)}
+.hero-since{position:absolute;right:38px;bottom:44px;z-index:3;font-family:'Oswald',sans-serif;color:rgba(244,238,225,.7);text-align:right;text-transform:uppercase;letter-spacing:.2em;font-size:.74rem}
+.hero-since b{display:block;color:var(--mustard);font-size:2.6rem;letter-spacing:.04em}
+
+/* PILIERS */
+.piliers{background:var(--ink);color:var(--cream)}
+.piliers .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.pil{padding:46px 36px;border-right:1px solid rgba(244,238,225,.12);display:flex;gap:18px;align-items:flex-start}
+.pil:last-child{border-right:none}
+.pil svg{width:38px;height:38px;color:var(--mustard);flex:0 0 auto}
+.pil h3{font-size:1.25rem;margin-bottom:6px;letter-spacing:.03em}
+.pil p{font-size:.92rem;color:rgba(244,238,225,.66)}
+
+section{position:relative}
+.pad{padding:116px 0}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.sec-head h2{font-size:clamp(2.4rem,5vw,4rem);margin-top:14px}
+.sec-head p{color:#5e5343;margin-top:14px;max-width:54ch}
+.sec-head.center{text-align:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+
+/* SIGNATURE anatomie */
+.anat{background:var(--cream2)}
+.anat-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.anat-txt h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:14px 0 20px}
+.anat-txt p{color:#5e5343;margin-bottom:16px;max-width:46ch}
+.anat-hint{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--flame);display:flex;align-items:center;gap:9px}
+.anat-hint svg{width:20px;height:20px}
+.stack{position:relative;height:440px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}
+.layer{position:relative;display:flex;align-items:center;justify-content:center;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;color:#fff;
+  box-shadow:0 6px 14px rgba(33,26,19,.18);transition:transform .55s cubic-bezier(.34,1.3,.5,1);margin:-2px 0;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.layer .tag{position:absolute;left:calc(100% + 22px);white-space:nowrap;font-size:.74rem;color:var(--ink);opacity:0;transition:opacity .4s;
+  background:#fff;padding:6px 12px;border-radius:30px;box-shadow:0 4px 14px rgba(33,26,19,.14);letter-spacing:.04em;text-shadow:none}
+.layer .tag::before{content:'';position:absolute;right:100%;top:50%;width:18px;height:1px;background:var(--flame)}
+.stack:hover .layer .tag,.stack.open .layer .tag{opacity:1}
+.l-bun-top{height:74px;width:280px;background:linear-gradient(180deg,#E3A85B,#CE8A3C);border-radius:140px 140px 30px 30px/90px 90px 30px 30px}
+.l-salade{height:22px;background:#6E9F4E;width:300px;border-radius:40px}
+.l-tomate{height:20px;background:#C0432E;width:292px;border-radius:40px}
+.l-cheese{height:24px;background:linear-gradient(#F2B43A,#E59A23);width:296px;border-radius:14px}
+.l-steak{height:46px;background:linear-gradient(#5B3826,#3F2517);width:288px;border-radius:40px}
+.l-sauce{height:16px;background:#E7C24A;width:284px;border-radius:40px}
+.l-bun-bot{height:40px;background:linear-gradient(180deg,#D69750,#C07E34);width:280px;border-radius:30px 30px 80px 80px}
+.stack:hover .l-bun-top,.stack.open .l-bun-top{transform:translateY(-120px)}
+.stack:hover .l-salade,.stack.open .l-salade{transform:translateY(-74px)}
+.stack:hover .l-tomate,.stack.open .l-tomate{transform:translateY(-40px)}
+.stack:hover .l-cheese,.stack.open .l-cheese{transform:translateY(-8px)}
+.stack:hover .l-steak,.stack.open .l-steak{transform:translateY(34px)}
+.stack:hover .l-sauce,.stack.open .l-sauce{transform:translateY(74px)}
+.stack:hover .l-bun-bot,.stack.open .l-bun-bot{transform:translateY(104px)}
+
+/* CARTE */
+.carte .sec-head{margin-bottom:52px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.mitem{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.mitem .ph{height:220px;overflow:hidden;position:relative}
+.mitem .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.mitem:hover .ph img{transform:scale(1.07)}
+.mitem .ph .pill{position:absolute;top:14px;left:14px;background:var(--flame);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;padding:5px 12px;border-radius:30px;z-index:2}
+.mitem .body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column}
+.mitem h3{font-size:1.5rem;margin-bottom:8px}
+.mitem p{color:#5e5343;font-size:.92rem;flex:1}
+.mitem .foot{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted)}
+.menu-note{margin-top:40px;text-align:center;background:var(--ink);color:var(--cream);padding:28px;border-radius:4px}
+.menu-note b{font-family:'Oswald',sans-serif;color:var(--mustard);text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem}
+.decline{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.decline span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;border:1px solid rgba(244,238,225,.3);padding:7px 18px;border-radius:30px}
+
+/* GALERIE */
+.gal{background:var(--ink);color:var(--cream)}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.ggrid figure{overflow:hidden;position:relative}
+.ggrid figure.big{grid-column:span 2;grid-row:span 2}
+.ggrid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.ggrid figure:hover img{transform:scale(1.07)}
+.ggrid figcaption{position:absolute;left:16px;bottom:13px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#fff;z-index:2;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.ggrid figure::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(20,14,9,.55))}
+
+/* INFOS */
+.infos{background:var(--cream)}
+.igrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.infos h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:24px}
+.iline{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.iline svg{width:22px;height:22px;color:var(--flame);flex:0 0 auto;margin-top:3px}
+.iline b{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;margin-bottom:2px}
+.iline span{color:#5e5343;font-size:.94rem}
+.iline a{color:#5e5343}.iline a:hover{color:var(--flame)}
+.iorder{display:inline-block;margin-top:24px;padding:14px 30px;background:var(--flame);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.84rem;transition:.3s}
+.iorder:hover{background:var(--flame-d)}
+.imap{min-height:430px;background:url('https://images.unsplash.com/photo-1602867629398-e6280bc18910?w=1000&auto=format&fit=crop&q=85') center/cover no-repeat;position:relative}
+.imap .pin{position:absolute;inset:0;background:linear-gradient(rgba(20,14,9,.15),rgba(20,14,9,.5));display:flex;align-items:flex-end;padding:30px}
+.imap .pin b{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#fff;font-size:1.2rem}
+
+footer{background:var(--char);color:rgba(244,238,225,.55);padding:46px 0 70px;text-align:center;border-top:1px solid rgba(244,238,225,.1)}
+footer .fb{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);font-size:1.5rem;margin-bottom:10px}
+footer p{font-size:.84rem}
+footer .soc{display:flex;gap:14px;justify-content:center;margin:18px 0}
+footer .soc a{width:40px;height:40px;border:1px solid rgba(244,238,225,.25);display:flex;align-items:center;justify-content:center;transition:.3s}
+footer .soc a:hover{background:var(--flame);border-color:var(--flame)}
+footer .soc svg{width:18px;height:18px}
+
+.hbadge{position:fixed;left:16px;bottom:16px;z-index:200;background:rgba(20,14,9,.9);color:#fff;font-family:'Instrument Sans',sans-serif;font-size:.66rem;letter-spacing:.06em;padding:8px 14px;border-radius:30px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14)}
+.hbadge b{color:var(--mustard);font-weight:400}
+
+@media(max-width:900px){
+  .navlinks{position:fixed;inset:0 0 0 auto;width:80%;max-width:330px;background:var(--char);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .45s;padding:40px}
+  .navlinks.open{transform:none}
+  .burger{display:flex}
+  nav.scrolled .burger,nav.scrolled .brand{color:var(--cream)}
+  .piliers .wrap{grid-template-columns:1fr}
+  .pil{border-right:none;border-bottom:1px solid rgba(244,238,225,.12)}
+  .anat-grid{grid-template-columns:1fr;gap:50px}
+  .menu-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .ggrid{grid-template-columns:repeat(2,1fr)}
+  .igrid{grid-template-columns:1fr;gap:40px}
+  .imap{min-height:300px}
+  .hero-since{display:none}
+}
+@media(max-width:480px){
+  .wrap,nav,.hero-inner{padding-left:20px;padding-right:20px}
+  .pad{padding:78px 0}
+  .ggrid{grid-template-columns:1fr}
+  .ggrid figure.big{grid-column:span 1;grid-row:span 1}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .stack:hover .layer,.stack.open .layer{transform:none!important}
+  .stack .layer .tag{opacity:1}
+  .stack{height:auto;gap:8px}
+}
 </style>
 </head>
-<body>
+<body id="top">
+
 <nav id="nav">
-  <a href="#accueil" class="nav-logo">BEE<span>FORE</span></a>
-  <ul>
-    <li><a href="#menu">Cocktails</a></li>
-    <li><a href="#food">Cuisine</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="tel:+41277226768" class="nav-cta">Réserver</a></li>
-  </ul>
+  <a href="#top" class="brand"><span class="b-dot"></span>Beefore</a>
+  <div class="navlinks" id="navlinks">
+    <a href="#concept">Le concept</a>
+    <a href="#carte">La carte</a>
+    <a href="#infos">Infos</a>
+    <a href="https://www.beefore.biz/online-ordering" target="_blank" rel="noopener" class="btn">Commander</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
 </nav>
-<section class="hero" id="accueil">
-  <div class="hi">
-    <span class="tag">Place Centrale 1 &mdash; Martigny</span>
-    <h1>BEE<span>FORE</span></h1>
-    <p>Bar &bull; Restaurant &bull; Cocktails &bull; Terrasse</p>
-    <a href="#menu" class="btn btn-amber">Nos cocktails</a>
-    <a href="#contact" class="btn btn-ol">Réserver</a>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="eyebrow" style="color:var(--mustard)">Burgers artisanaux · Martigny</span>
+    <h1>L'artisan du <em>hamburger</em></h1>
+    <p>Des produits frais et locaux, un steak façonné par une boucherie valaisanne, des buns d'un boulanger d'ici. Le vrai goût du burger fait maison, depuis 2016.</p>
+    <div class="actions">
+      <a href="https://www.beefore.biz/online-ordering" target="_blank" rel="noopener" class="btn">Commander en ligne</a>
+      <a href="#carte" class="ghost">Voir la carte</a>
+    </div>
   </div>
-</section>
-<section class="concept" id="concept">
-  <div class="cw">
-    <div class="ci fade-in"></div>
-    <div class="ct fade-in">
-      <span class="tag2">Le lieu</span>
-      <h2>L'adresse qu'il vous faut avant tout</h2>
-      <p>Beefore, c'est le spot de Martigny où l'on vient avant le dîner pour un apéro, après le travail pour se retrouver, ou jusqu'au bout de la nuit pour une soirée mémorable.</p>
-      <p>Cocktails signature, sélection de vins valaisans, bières artisanales — et une cuisine généreuse pour accompagner le tout.</p>
-      <p>En plein cœur de la Place Centrale, avec une terrasse idéale pour les soirées d'été.</p>
+  <div class="hero-since">Maison indépendante<b>2016</b></div>
+</header>
+
+<!-- PILIERS -->
+<section class="piliers">
+  <div class="wrap">
+    <div class="pil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 14c0-4 3.5-7 8-7s8 3 8 7"/><path d="M3 14h18v3a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M8 7V5M12 7V4M16 7V5"/></svg>
+      <div><h3>Le steak Beefore</h3><p>Un mélange bœuf et veau préparé par une boucherie valaisanne, servi rosé.</p></div>
+    </div>
+    <div class="pil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 11c0-3 3-5 7-5s7 2 7 5c0 1.5-1 2-1 4s1 3-2 3H8c-3 0-2-1-2-3s-1-2.5-1-4z"/><path d="M9 9c1-1 5-1 6 0"/></svg>
+      <div><h3>Les buns artisanaux</h3><p>Des pains à burger confectionnés par un boulanger artisan local.</p></div>
+    </div>
+    <div class="pil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 3h8l-1 5H9zM7 8h10l1 11a2 2 0 01-2 2H8a2 2 0 01-2-2z"/><path d="M10 13h4"/></svg>
+      <div><h3>Les sauces maison</h3><p>Toutes nos sauces sont préparées maison, pour une signature unique.</p></div>
     </div>
   </div>
 </section>
-<section class="menu" id="menu">
-  <div class="sec-hd fade-in">
-    <span class="tag2">Bar</span>
-    <h2>Cocktails &amp; Boissons</h2>
-    <div class="ln"></div>
-  </div>
-  <div class="menu-wrap fade-in">
-    <div class="mside">
-      <h3>Cocktails signature</h3>
-      <div class="mrow"><span class="ml">Beefore Sour (citron, miel, gin)</span><span class="mp">14.00</span></div>
-      <div class="mrow"><span class="ml">Smoke &amp; Amber (whisky, sirop d'érable, fumée)</span><span class="mp">16.00</span></div>
-      <div class="mrow"><span class="ml">Golden Hour (champagne, gingembre, passion)</span><span class="mp">15.00</span></div>
-      <div class="mrow"><span class="ml">Dark Bee (rhum, miel, lime, ginger beer)</span><span class="mp">14.00</span></div>
-      <div class="mrow"><span class="ml">Mocktails (sans alcool)</span><span class="mp">10.00</span></div>
-    </div>
-    <div class="mside">
-      <h3>Vins &amp; Bières</h3>
-      <div class="mrow"><span class="ml">Vins valaisans au verre</span><span class="mp">dès 7.00</span></div>
-      <div class="mrow"><span class="ml">Bouteille valaisan (rouge / blanc)</span><span class="mp">dès 38.00</span></div>
-      <div class="mrow"><span class="ml">Bières pression (Valaisanne, IPA...)</span><span class="mp">6.00–8.00</span></div>
-      <div class="mrow"><span class="ml">Prosecco / Crémant</span><span class="mp">dès 9.00</span></div>
-      <div class="mrow"><span class="ml">Soft drinks &amp; jus</span><span class="mp">4.00–6.00</span></div>
+
+<!-- SIGNATURE anatomie -->
+<section class="anat pad" id="concept">
+  <div class="wrap">
+    <div class="anat-grid">
+      <div class="anat-txt reveal">
+        <span class="eyebrow">L'anatomie d'un Beefore</span>
+        <h2>Chaque couche a son artisan</h2>
+        <p>Un bon burger, ce n'est pas qu'un sandwich rapide : c'est un assemblage de produits choisis, étage par étage. Passez la souris sur le burger pour découvrir ce qui se cache à l'intérieur.</p>
+        <p>Du pain à la sauce, tout est pensé local et fait avec soin. C'est ce qui fait la différence entre grignoter et se régaler.</p>
+        <div class="anat-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 9l7-5 7 5M5 9v6l7 5 7-5V9M5 9l7 5 7-5"/></svg>Survolez (ou touchez) pour déconstruire</div>
+      </div>
+      <div class="stack reveal" id="stack" aria-label="Anatomie d'un burger Beefore">
+        <div class="layer l-bun-top">Bun doré<span class="tag">Boulanger artisan local</span></div>
+        <div class="layer l-salade">Salade fraîche<span class="tag">Produits frais &amp; locaux</span></div>
+        <div class="layer l-tomate">Tomate<span class="tag">De saison</span></div>
+        <div class="layer l-cheese">Fromage fondant<span class="tag">Raclette de Bagnes en option</span></div>
+        <div class="layer l-steak">Steak Beefore<span class="tag">Boucherie valaisanne · bœuf &amp; veau</span></div>
+        <div class="layer l-sauce">Sauce maison<span class="tag">Préparée chez nous</span></div>
+        <div class="layer l-bun-bot">Base moelleuse<span class="tag">Le même pain d'artisan</span></div>
+      </div>
     </div>
   </div>
 </section>
-<section class="food" id="food">
-  <div class="fw">
-    <div class="ft fade-in">
-      <span class="tag2">Cuisine</span>
-      <h2>Burgers, planches &amp; petites assiettes</h2>
-      <p>Notre cuisine mise sur le généreux et le savoureux : burgers signature avec viande fraîche, planches apéritives, salades et plats du soir.</p>
-      <p>Du casual chic pour accompagner vos verres ou dîner tranquillement avant de poursuivre la soirée.</p>
+
+<!-- CARTE -->
+<section class="carte pad wrap" id="carte">
+  <div class="sec-head center reveal">
+    <span class="eyebrow">La carte</span>
+    <h2>Nos burgers signatures</h2>
+    <p>Une carte qui évolue avec les saisons, autour de quelques incontournables. Chaque burger est servi en formule, avec frites maison et boisson.</p>
+  </div>
+  <div class="menu-grid">
+    <div class="mitem reveal">
+      <div class="ph"><span class="pill">Le classique</span><img src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?w=700&auto=format&fit=crop&q=85" alt="Le Beefore classique"></div>
+      <div class="body">
+        <h3>Le Beefore</h3>
+        <p>Bun du boulanger, steak Beefore 150g (bœuf &amp; veau), oignons, salade et mayo maison. Le burger qui a tout lancé en 2016.</p>
+        <div class="foot">Formule frites + boisson</div>
+      </div>
     </div>
-    <div class="fi fade-in"></div>
+    <div class="mitem reveal">
+      <div class="ph"><span class="pill">Spécialité valaisanne</span><img src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?w=700&auto=format&fit=crop&q=85" alt="Burger raclette de Bagnes"></div>
+      <div class="body">
+        <h3>Le Raclette de Bagnes</h3>
+        <p>Steak Beefore, raclette de Bagnes fondante, lard grillé, salade et sauce maison. Le Valais dans un burger.</p>
+        <div class="foot">Formule frites + boisson</div>
+      </div>
+    </div>
+    <div class="mitem reveal">
+      <div class="ph"><span class="pill">À-côtés</span><img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=700&auto=format&fit=crop&q=85" alt="Frites maison"></div>
+      <div class="body">
+        <h3>Frites &amp; à-côtés</h3>
+        <p>Nos frites maison généreuses, à accompagner d'une sauce maison. Et pour finir, desserts et Chupa Chups pour les petits.</p>
+        <div class="foot">À la carte</div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-note reveal">
+    <b>Chaque burger se décline selon vos envies</b>
+    <div class="decline"><span>Steak Beefore</span><span>Poulet</span><span>Végétarien</span></div>
+    <p style="margin-top:16px;color:rgba(244,238,225,.7);font-size:.92rem">Carte complète et prix sur notre page de commande en ligne. Click &amp; collect en 30 minutes.</p>
   </div>
 </section>
-<section class="contact" id="contact">
-  <div class="c-inner fade-in">
-    <div class="cc"><span class="tag2">Adresse</span><h3>Nous trouver</h3><a href="https://maps.google.com/?q=Place+Centrale+1+Martigny" target="_blank">Place Centrale 1<br>1920 Martigny, Valais</a></div>
-    <div class="cc"><span class="tag2">Réservations</span><h3>Nous joindre</h3><a href="tel:+41277226768">027 722 67 68</a></div>
-    <div class="cc"><span class="tag2">Le savoir</span><h3>Ouvert le soir</h3><p>Consultez-nous ou appelez pour<br>connaître nos horaires du moment<br>et réserver votre table.</p></div>
+
+<!-- GALERIE -->
+<section class="gal pad">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:46px">
+      <span class="eyebrow" style="color:var(--mustard)">En images</span>
+      <h2>Ça se passe ici</h2>
+    </div>
+    <div class="ggrid reveal">
+      <figure class="big"><img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=1000&auto=format&fit=crop&q=85" alt="Burger gourmand"><figcaption>Fait minute</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1602867629398-e6280bc18910?w=600&auto=format&fit=crop&q=85" alt="Notre salle"><figcaption>Notre salle</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1651981140119-0701bd856a98?w=600&auto=format&fit=crop&q=85" alt="Produits locaux"><figcaption>Produits locaux</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&auto=format&fit=crop&q=85" alt="Frites maison"><figcaption>Frites maison</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=85" alt="À partager"><figcaption>À partager</figcaption></figure>
+    </div>
   </div>
 </section>
-<footer><p>&copy; 2025 Beefore Sàrl &mdash; Place Centrale 1, 1920 Martigny &nbsp;&middot;&nbsp; 027 722 67 68</p></footer>
+
+<!-- INFOS -->
+<section class="infos pad" id="infos">
+  <div class="wrap">
+    <div class="igrid">
+      <div class="reveal">
+        <span class="eyebrow">Infos pratiques</span>
+        <h2>Passez nous voir</h2>
+        <div class="iline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Adresse</b><span>Place Centrale 1, 1920 Martigny</span></div>
+        </div>
+        <div class="iline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Horaires</b><span>Lundi au samedi : 11h30 – 14h00 &amp; 18h30 – 21h30<br>Vendredi &amp; samedi soir jusqu'à 22h00 · Dimanche fermé</span></div>
+        </div>
+        <div class="iline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2l1 6h10l1-6"/><rect x="4" y="8" width="16" height="13" rx="1"/><path d="M9 13h6"/></svg>
+          <div><b>Commande</b><span>Commande en ligne avec retrait en 30 min (click &amp; collect), ou livraison à Martigny via UberEats.</span></div>
+        </div>
+        <a href="https://www.beefore.biz/online-ordering" target="_blank" rel="noopener" class="iorder">Commander en ligne</a>
+      </div>
+      <div class="imap reveal">
+        <div class="pin"><b>Place Centrale 1 · Martigny</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">Beefore</div>
+  <p>Artisan du hamburger depuis 2016 · Place Centrale 1, 1920 Martigny</p>
+  <div class="soc">
+    <a href="https://www.instagram.com/beefore_burgers_martigny" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://www.facebook.com/beefore" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l.5-3.5H13V7.3c0-1 .3-1.7 1.8-1.7H17V2.4C16.6 2.3 15.4 2.2 14 2.2c-2.9 0-4.9 1.8-4.9 5V9.5H6V13h3.1v9z"/></svg></a>
+  </div>
+  <p>© 2026 Beefore Sàrl — Burgers artisanaux, Martigny</p>
+</footer>
+
+<div class="hbadge">Site de démonstration réalisé par <b>Horizon IA</b></div>
+
 <script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60));
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:0.08});
-document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+burger.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((e)=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// tap to deconstruct (mobile)
+const stack=document.getElementById('stack');
+stack.addEventListener('click',()=>stack.classList.toggle('open'));
 </script>
 </body>
 </html>
